@@ -2,6 +2,7 @@ import os
 import re
 from chardet import detect
 from .stopwords import stop_words
+from .progress_printer import ProgressPrinter
 
 def parse_email(buf):
     # Then, split the header and the main body
@@ -43,27 +44,29 @@ def read_file(file_name):
 def data_loader(src_path,utf8_only=False):
     ret=[]
     lines=read_file(os.path.join(src_path,"label","index")).splitlines()
-    _i,_n=0,len(lines)
+    pp=ProgressPrinter(len(lines))
     for line in lines:
         try:
-            label,file_name=line.split(' ')
+            label,origin_file_name=line.split(' ')
             if label=="ham":
                 label=0
             else:
                 assert label=="spam"
                 label=1
-            file_name=os.path.join(src_path,"label",file_name)
+            file_name=os.path.join(src_path,"label",origin_file_name)
             if utf8_only:
                 with open(file_name,"r") as f:
                     buf=f.read()
             else:
                 buf=read_file(file_name)
             curr_email=parse_email(buf)
-            curr_email["label"]=label
-            ret.append(curr_email)
+            curr_obj={
+                "input":curr_email,
+                "label":label,
+                "source_file":origin_file_name,
+            }
+            ret.append(curr_obj)
         except:
             pass
-        if _i==0 or _i*1000//_n!=(_i-1)*1000//_n:
-            print("Progress: {}%".format(_i*1000//_n/10),end="\r")
-        _i+=1
+        pp.go()
     return ret
