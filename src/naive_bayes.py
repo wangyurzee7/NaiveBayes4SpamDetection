@@ -1,4 +1,4 @@
-from .progress_printer import ProgressPrinter
+from .utils.progress_printer import ProgressPrinter
 import numpy as np
 
 class NaiveBayesClassifier:

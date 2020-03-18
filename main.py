@@ -7,7 +7,7 @@ import numpy as np
 from src.naive_bayes import NaiveBayesClassifier
 from src.accuracy_methods import get_accuracy_method
 
-def train_and_eval(train_set, test_set):
+def train_and_eval(config, train_set, test_set):
     model=NaiveBayesClassifier(lmd=config["lambda"])
 
     test_y_true=[]
@@ -22,7 +22,7 @@ def train_and_eval(train_set, test_set):
     result={}
     for method_name in config["accuracy_method"]:
         method=get_accuracy_method(method_name)
-        result[method_name]=method(test_y_true,y_pred)
+        result[method_name]=round(method(test_y_true,y_pred),6)
     return result
 
 if __name__=="__main__":
@@ -42,5 +42,5 @@ if __name__=="__main__":
         temp=json.load(open(test_file,"r"))
         test_set.extend(temp)
 
-    result=train_and_eval(train_set=train_set,test_set=test_set)
+    result=train_and_eval(config=config, train_set=train_set,test_set=test_set)
     print(result)
