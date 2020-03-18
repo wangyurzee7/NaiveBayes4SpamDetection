@@ -23,7 +23,7 @@ You can know how to use them by `--help`:
 ```
 $ python3 get_data.py --help
 usage: get_data.py [-h] --src SRC --dst DST [--seed SEED]
-                   [--k-groups K_GROUPS]
+                   [--k-groups K_GROUPS] [--utf8-only] [--do-not-shuffle]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -33,18 +33,59 @@ optional arguments:
   --k-groups K_GROUPS, -k K_GROUPS
                         The number of groups you want to divide the dataset
                         into, default=5
+  --utf8-only           Only collect datas encoded by UTF-8
+  --do-not-shuffle      Do not do random shuffle
+
+$ python3 main.py --help
+usage: main.py [-h] --config CONFIG
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --config CONFIG  Config file path
+
+$ python3 kford.py --help
+usage: kford.py [-h] --config CONFIG [--print-all-results]
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --config CONFIG      Config file path
+  --print-all-results  Print all results when each group is test set.
 ```
 
 Besides, here is a sample config for `main.py`:
 
 ```
+{
+    "train_file": ["data/test/data_0.json","data/test/data_1.json","data/test/data_2.json","data/test/data_3.json"], // Train file list
+    "test_file": ["data/test/data_4.json"], // Test file list
 
+    "lambda": 1.0, // Parameter lambda for Laplace Smoothing
+
+    "accuracy_method": [ // Accuracy functions. In addition to the following, 'micro-f1' is also supported(for multi-label classification task)
+        "accuracy",
+        "macro-precision",
+        "macro-recall",
+        "macro-f1"
+    ]
+}
 ```
 
 Here is a sample config for `kfold.py`:
 
 ```
+{
+    "data_path": "data/test/", // Data path. Data files in this path should be named as `data_{i}.json`
 
+    // fields below are same as the config for `main.py`
+    "lambda": 1.0,
+
+    "accuracy_method": [
+        "accuracy",
+        "macro-precision",
+        "macro-recall",
+        "macro-f1"
+    ]
+}
 ```
 
 ## How to Recurrence Experiment in the Report
