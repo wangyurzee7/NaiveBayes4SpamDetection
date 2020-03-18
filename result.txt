@@ -1,0 +1,39 @@
+[ config/100000007_2.json ]
+Mean : {'accuracy': 0.929744, 'macro-precision': 0.914866, 'macro-recall': 0.942576, 'macro-f1': 0.924782}
+Std : {'accuracy': 0.008647, 'macro-precision': 0.010034, 'macro-recall': 0.006485, 'macro-f1': 0.009313}
+[ config/100000007_3.json ]
+Mean : {'accuracy': 0.935184, 'macro-precision': 0.920617, 'macro-recall': 0.946777, 'macro-f1': 0.930389}
+Std : {'accuracy': 0.006206, 'macro-precision': 0.007682, 'macro-recall': 0.004513, 'macro-f1': 0.006833}
+[ config/100000007_4.json ]
+Mean : {'accuracy': 0.935608, 'macro-precision': 0.921125, 'macro-recall': 0.947192, 'macro-f1': 0.930852}
+Std : {'accuracy': 0.007645, 'macro-precision': 0.009026, 'macro-recall': 0.005761, 'macro-f1': 0.008214}
+[ config/100000007_5.json ]
+Mean : {'accuracy': 0.938075, 'macro-precision': 0.923733, 'macro-recall': 0.949166, 'macro-f1': 0.933432}
+Std : {'accuracy': 0.003101, 'macro-precision': 0.003305, 'macro-recall': 0.002468, 'macro-f1': 0.00318}
+[ config/100000007_5_lambda=0.01.json ]
+Mean : {'accuracy': 0.968374, 'macro-precision': 0.959278, 'macro-recall': 0.972868, 'macro-f1': 0.965416}
+Std : {'accuracy': 0.00199, 'macro-precision': 0.002619, 'macro-recall': 0.00136, 'macro-f1': 0.002106}
+[ config/100000007_5_lambda=0.1.json ]
+Mean : {'accuracy': 0.959194, 'macro-precision': 0.947991, 'macro-recall': 0.965592, 'macro-f1': 0.955609}
+Std : {'accuracy': 0.001415, 'macro-precision': 0.001639, 'macro-recall': 0.001083, 'macro-f1': 0.001428}
+[ config/100000007_5_lambda=0.25.json ]
+Mean : {'accuracy': 0.952721, 'macro-precision': 0.940297, 'macro-recall': 0.960506, 'macro-f1': 0.94875}
+Std : {'accuracy': 0.001498, 'macro-precision': 0.001971, 'macro-recall': 0.001067, 'macro-f1': 0.001642}
+[ config/100000007_5_lambda=0.5.json ]
+Mean : {'accuracy': 0.946592, 'macro-precision': 0.933206, 'macro-recall': 0.95581, 'macro-f1': 0.942315}
+Std : {'accuracy': 0.001933, 'macro-precision': 0.002319, 'macro-recall': 0.001451, 'macro-f1': 0.002053}
+[ config/123456789_5.json ]
+Mean : {'accuracy': 0.936776, 'macro-precision': 0.922368, 'macro-recall': 0.948011, 'macro-f1': 0.932058}
+Std : {'accuracy': 0.00389, 'macro-precision': 0.004349, 'macro-recall': 0.002488, 'macro-f1': 0.003938}
+[ config/998244353_5.json ]
+Mean : {'accuracy': 0.929744, 'macro-precision': 0.914866, 'macro-recall': 0.942576, 'macro-f1': 0.924782}
+Std : {'accuracy': 0.008647, 'macro-precision': 0.010034, 'macro-recall': 0.006485, 'macro-f1': 0.009313}
+[ config/100000007_5_tr=0.05.json ]
+Mean : {'accuracy': 0.911491, 'macro-precision': 0.895901, 'macro-recall': 0.92325, 'macro-f1': 0.9054}
+Std : {'accuracy': 0.004127, 'macro-precision': 0.003704, 'macro-recall': 0.003214, 'macro-f1': 0.003938}
+[ config/123456789_5_tr=0.05.json ]
+Mean : {'accuracy': 0.885119, 'macro-precision': 0.871786, 'macro-recall': 0.905577, 'macro-f1': 0.879339}
+Std : {'accuracy': 0.01556, 'macro-precision': 0.01355, 'macro-recall': 0.011711, 'macro-f1': 0.015146}
+[ config/998244353_5_tr=0.05.json ]
+Mean : {'accuracy': 0.867609, 'macro-precision': 0.860577, 'macro-recall': 0.89001, 'macro-f1': 0.862222}
+Std : {'accuracy': 0.051892, 'macro-precision': 0.044739, 'macro-recall': 0.036886, 'macro-f1': 0.051478}

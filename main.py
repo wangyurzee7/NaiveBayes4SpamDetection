@@ -16,6 +16,8 @@ def train_and_eval(config, train_set, test_set):
         test_y_true.append(test_case["label"])
         test_x.append(test_case["input"])
     test_y_true=np.array(test_y_true)
+    if "training_rate" in config:
+        train_set=train_set[:int(config["training_rate"]*len(train_set))]
     model.fit(train_set)
     y_pred=model.predict(test_x)
 
