@@ -1,6 +1,7 @@
 import os
 import re
 from chardet import detect
+from .stopwords import stop_words
 
 def parse_email(buf):
     # Then, split the header and the main body
@@ -9,6 +10,9 @@ def parse_email(buf):
 
     # get content and sender
     content=re.sub(r"[^a-z]"," ",main_body.lower()).split()
+    content=list(set(content))
+    content=list(filter(lambda w:w not in stop_words,content))
+
     sender=None
     _from=re.findall("From:[^\n]*\n",header)
     for f in _from:
