@@ -88,6 +88,8 @@ Here is a sample config for `kfold.py`:
 }
 ```
 
+These two configs above can be found at `config/samples`
+
 ## How to Recurrence Experiment in the Report
 
 If the source data is at `${src_path}/trec06p`.

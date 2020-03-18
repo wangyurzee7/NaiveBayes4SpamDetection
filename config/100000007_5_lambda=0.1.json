@@ -1,0 +1,12 @@
+{
+    "data_path": "data/100000007_5/",
+
+    "lambda": 0.1,
+
+    "accuracy_method": [
+        "accuracy",
+        "macro-precision",
+        "macro-recall",
+        "macro-f1"
+    ]
+}
