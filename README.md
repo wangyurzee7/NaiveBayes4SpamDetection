@@ -8,7 +8,7 @@ git repo: [https://github.com/wangyurzee7/NaiveBayes4SpamDetection](https://gith
 
 * Python Version: `Python 3.7.6`
 
-* Packages: `numpy`, `matplotlib`(for figure making)
+* Packages: `numpy`
 
 ## How to Run?
 
@@ -38,7 +38,10 @@ Here is a sample config for `kfold.py`:
 
 ## How to Recurrence Experiment in the Report
 
+If the source data is at `${src_path}/trec06p`
+
 ```
 chmod +x run.sh
-./run.sh
+./run.sh ${src_path}/trec06p
 ```
+
