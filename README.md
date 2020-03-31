@@ -43,8 +43,8 @@ optional arguments:
   -h, --help       show this help message and exit
   --config CONFIG  Config file path
 
-$ python3 kford.py --help
-usage: kford.py [-h] --config CONFIG [--print-all-results]
+$ python3 kfold.py --help
+usage: kfold.py [-h] --config CONFIG [--print-all-results]
 
 optional arguments:
   -h, --help           show this help message and exit
